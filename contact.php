@@ -1,10 +1,24 @@
-<?php $name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$formcontent="From: $name \n Message: $message";
-$recipient = "moussasagos@gmail.com";
-$subject = "Contact Form MonPortfolio";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "Thank You!";
+<?php
+// Get data from form
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
+
+$to = "moussasagos@gmail.com";
+$subject = "This is the subject line";
+
+// The following text will be sent
+// Name = user entered name
+// Email = user entered email
+// Message = user entered message
+$txt ="Name = ". $name . "\r\n Email = "
+	. $email . "\r\n Message =" . $message;
+
+$headers = "From: noreply@demosite.com";
+if($email != NULL) {
+	mail($to, $subject, $txt, $headers);
+}
+
+// Redirect to
+
 ?>
