@@ -801,7 +801,7 @@
                       <div class="block-title">
                         <h3>Formulaire de  <span>Contact</span></h3>
                       </div>
-                      <form method="post" action="contact.php">
+                      <form method="post">
 
                         <div class="messages"></div>
 
@@ -809,7 +809,7 @@
                           <div class="form-group form-group-with-icon">
                             <i class="fa fa-user"></i>
                             <label>Nom complet</label>
-                            <input id="Name" type="text" name="Name" name="Name" class="form-control" placeholder required="required" data-error="Champ obligatoire.">
+                            <input id="nom" type="text" name="nom" class="form-control" placeholder required="required" data-error="Champ obligatoire.">
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -817,7 +817,7 @@
                           <div class="form-group form-group-with-icon">
                             <i class="fa fa-envelope"></i>
                             <label>E-mail</label>
-                            <input id="Email" type="email" name="Email" class="form-control" placeholder required="required" data-error="Champ obligatoire.">
+                            <input id="email" type="email" name="email" class="form-control" placeholder required="required" data-error="Champ obligatoire.">
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -825,11 +825,11 @@
                           <div class="form-group form-group-with-icon">
                             <i class="fa fa-comment"></i>
                             <label>Votre message</label>
-                            <textarea id="Message" name="Message" class="form-control" placeholder rows="4" required="required" data-error="Champ obligatoire."></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder rows="4" required="required" data-error="Champ obligatoire."></textarea>
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
-                          <input type="submit" class="button btn-send" value="Envoyer">
+                          <input type="submit" id="btn" class="button btn-send" value="Envoyer">
                         </div>
                       </form>
                     </div>
@@ -856,5 +856,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.hoverdir.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="message.js"></script>
 </body>
 </html>
